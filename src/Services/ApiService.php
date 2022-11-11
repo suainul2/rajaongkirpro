@@ -32,6 +32,7 @@ class ApiService
         } catch (ClientException $e) {
             $response = $e->getResponse();
             $responseBodyAsString = $response->getBody()->getContents();
+            return $responseBodyAsString;
         }
     }
     protected function post(string $url)
