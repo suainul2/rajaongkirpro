@@ -6,24 +6,24 @@ use Suainul\Rajaongkir\Services\ApiService;
 
 class Province extends ApiService
 {
-    private array $data = [];
+    private string $id;
     public function __construct()
     {
         parent::__construct();   
     }
     public function search()
     {
-        return $this->get("/province?".http_build_query($this->data))->process();
+        return $this->get("/province?".http_build_query(["key" => $this->key]))->process();
     }
-    
+
     /**
-     * Set the value of data
+     * Set the value of id
      *
      * @return  self
      */ 
-    public function setData(array $data)
+    public function setId(string $id)
     {
-        $this->data = $data+["key" => $this->key];
+        $this->id = $id;
 
         return $this;
     }
