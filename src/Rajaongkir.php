@@ -16,4 +16,12 @@ class Rajaongkir
     {
         return new Province;
     }
+    public function city()
+    {
+        return new City;
+    }
+    public function subdistrict()
+    {
+        return new Subdistrict;
+    }
 }
