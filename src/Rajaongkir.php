@@ -12,4 +12,8 @@ class Rajaongkir
     {
         return new Tracking;
     }
+    public function province()
+    {
+        return new Province;
+    }
 }
