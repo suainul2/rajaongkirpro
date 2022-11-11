@@ -12,6 +12,6 @@ class Subdistrict extends ApiService
     }
     public function search($cityId,$subdistrictId = "")
     {
-        return $this->get("/subdistrict?".http_build_query(["subdistrict"=> $subdistrictId,"city" =>$cityId, "key" => $this->key]))->process();
+        return $this->get("/subdistrict?".http_build_query(["id"=> $subdistrictId,"city" =>$cityId, "key" => $this->key]))->process();
     }
 }
