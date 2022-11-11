@@ -8,4 +8,8 @@ class Rajaongkir
     {
         return new Cost;
     }
+    public function track()
+    {
+        return new Tracking;
+    }
 }
