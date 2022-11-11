@@ -1,0 +1,30 @@
+{
+    "name": "suainul/rajaongkirpro",
+    "description": "Consume API rajaongkir PRO",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Suainul\\Rajaongkir\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "suainul2",
+            "email": "suainulovi@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "7.4"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Suainul\\Rajaongkir\\Providers\\RajaongkirProvider"
+            ],
+            "aliases": {
+                "Rajaongkir": "Suainul\\Rajaongkir\\Facades\\RajaongkirFacade"
+            }
+        }
+    }
+}
