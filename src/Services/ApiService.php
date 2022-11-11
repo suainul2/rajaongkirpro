@@ -28,11 +28,12 @@ class ApiService
                 'connect_timeout' => 5,
                 'json' => $this->data,
             ]);
-            return $response;
+            $response = $response->getBody()->getContents();
+            return json_decode($response);
         } catch (ClientException $e) {
             $response = $e->getResponse();
             $responseBodyAsString = $response->getBody()->getContents();
-            return $responseBodyAsString;
+            return json_decode($responseBodyAsString);
         }
     }
     protected function post(string $url)
