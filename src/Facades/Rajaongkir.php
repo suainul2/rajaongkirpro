@@ -4,7 +4,7 @@ namespace Suainul\Rajaongkir\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class RajaongkirFacade extends Facade
+class Rajaongkir extends Facade
 {
     /**
      * Get the registered name of the component.

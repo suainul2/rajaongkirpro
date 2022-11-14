@@ -23,7 +23,7 @@
                 "Suainul\\Rajaongkir\\Providers\\RajaongkirProvider"
             ],
             "aliases": {
-                "Rajaongkir": "Suainul\\Rajaongkir\\Facades\\RajaongkirFacade"
+                "Rajaongkir": "Suainul\\Rajaongkir\\Facades\\Rajaongkir"
             }
         }
     }
