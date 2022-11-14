@@ -6,7 +6,7 @@ use Suainul\Rajaongkir\Services\ApiService;
 
 class Cost extends ApiService
 {
-    private $origin,$destination,$weight,$courier;
+    private $origin,$destination,$courier,$size = [];
     public function __construct()
     {
         parent::__construct();   
@@ -18,9 +18,8 @@ class Cost extends ApiService
             "originType"=> config("rajaongkir.originType"),
             "destination"=> $this->destination,
             "destinationType"=> config("rajaongkir.destinationType"),
-            "weight"=> $this->weight,
             "courier"=> $this->courier
-        ])->process();
+        ]+$this->size)->process();
     }
 
     /**
@@ -54,7 +53,7 @@ class Cost extends ApiService
      */ 
     public function setWeight($weight)
     {
-        $this->weight = $weight;
+        $this->size["weight"] = $weight;
 
         return $this;
     }
@@ -67,6 +66,31 @@ class Cost extends ApiService
     public function setCourier($courier)
     {
         $this->courier = $courier;
+
+        return $this;
+    }
+
+    public function setLength($length)
+    {
+        $this->size["length"] = $length;
+
+        return $this;
+    }
+    public function setWidth($width)
+    {
+        $this->size["width"] = $width;
+
+        return $this;
+    }
+    public function setHeight($height)
+    {
+        $this->size["height"] = $height;
+
+        return $this;
+    }
+    public function setDiameter($diameter)
+    {
+        $this->size["diameter"] = $diameter;
 
         return $this;
     }
