@@ -29,11 +29,11 @@ class ApiService
                 'json' => $this->data,
             ]);
             $response = $response->getBody()->getContents();
-            return json_decode($response);
+            return json_decode($response)->rajaongkir;
         } catch (ClientException $e) {
             $response = $e->getResponse();
             $responseBodyAsString = $response->getBody()->getContents();
-            return json_decode($responseBodyAsString);
+            return json_decode($responseBodyAsString)->rajaongkir;
         }
     }
     protected function post(string $url)
